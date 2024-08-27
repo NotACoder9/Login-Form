@@ -1,100 +1,96 @@
-/* For small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    body {
-        flex-direction: column;
-    }
-    
-    input, button {
-        width: 100%;
-        padding: 8px;
-        font-size: 16px;
-    }
-    
-    h1 {
-        font-size: 24px;
-    }
+body {
+margin: 20px;
+display: flex;
+flex-direction: column;
+background: rgb(236,0,0);
+background: linear-gradient(90deg, rgba(236,0,0,1) 0%, rgba(15,66,204,1)  70%);
+color: white;
+
+animation:  bodyBackgroundAnimation 8s ease infinite;
+background-size: 400% 400%;
 }
 
-/* For medium devices (tablets, 768px and up) */
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-    body {
-        flex-direction: column;
-    }
-    
-    input, button {
-        width: 80%;
-    }
-    
-    h1 {
-        font-size: 30px;
-    }
+@keyframes bodyBackgroundAnimation {
+0%{
+background-position: 0 50%;
 }
 
-/* For large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    body {
-        max-width: 960px;
-        margin: 0 auto;
-    }
-    
-    input, button {
-        width: 60%;
-    }
-    
-    h1 {
-        font-size: 36px;
-    }
+50%{
+background-position: 100% 50%;
+}
+
+100% {
+background-position: 0 50%;
+}
+}
+h1 {
+text-align:center;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+color: white;
+}
+
+h1:hover {
+color:gray;
 }
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    max-width: 600px;
-    margin: auto;
-}
-body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+margin: auto;
+text-align: center;
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
- 
-button {
-    padding: 10px;
-    font-size: 18px;
-    background: linear-gradient(45deg, #ff9900, #ffcc00);
-    border: none;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
+label {
+font-size: 12px;
+color: white;
+margin: 10px;
+text-transform: uppercase;
 }
 
-button:hover {
-    background: linear-gradient(45deg, #ff6600, #ff9900);
-    transform: translateY(-5px);
-}
-input, button {
-    padding: 15px;
-    margin-bottom: 20px;
-}
-input:focus, button:focus {
-    border: 2px solid #0055ff;
-    box-shadow: 0 0 10px #0055ff;
-}
-button {
-    padding: 15px 20px;
-    font-size: 20px;
-}
-input:hover, button:hover {
-    transition: all 0.3s ease;
-    transform: scale(1.05);
-}
-body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+input {
+border: 1px solid black;
+border-radius:5px;
+
+padding: 10px;
+margin-bottpm : 10px;
+
+width: 300px;
+
+transition: all 0.2s ease-in-out;
 }
 
+input::placeholder{
+font-size:12px;
+}
+
+input:focus,
+input:focus-visible{
+border: 2px solid red;
+
+outline: red;
+}
+
+input:hover{
+box-shadow: 3px 4px 5px 0px red;
+}
+
+
+button  {
+padding: 10px;
+margin: 10px;
+
+font-size: 20px;
+font-weight: bold;
+background-color: #e6ff25;
+color:rgb(64, 64, 82);
+
+
+border: 1 px solid black;
+
+border-radius: 10px;
+transition: all 0.3s ease-in-out;
+}
+
+button:hover
+{
+cursor: pointer;
+transform: translateY(-4px);
+}
